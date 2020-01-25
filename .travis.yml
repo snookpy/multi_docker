@@ -4,7 +4,7 @@ sudo: required
 services:
     - docker
 before_install:
-    - docker build -t nuenook/react-test -f ./client/Dockerfie.dev ./client
+    - docker build -t nuenook/react-test -f ./client/Dockerfile.dev ./client
 
 script:
     - docker run -e CI=true nuenook/react-test npm run test
